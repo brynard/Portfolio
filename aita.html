@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+ 
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="portfolio-header">
+        <div class="container">
+            <nav>
+                <img src="images/AITA.png" class="logo">
+                <ul id="sideMenu">
+
+
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+            </nav>
+
+
+            <div class="row project">
+                <div class="project-col-left">
+                    <div class="project-title">AITA - Aset Inventory Tracking Application</div>
+                    <p>AITA is a tracking application developed for project leaders to helps them</p>
+                </div>
+
+                <div class="project-col-right">
+                    <div class="project-info">
+                        <h3>Project Information</h3>
+                        <ul>
+                            <li>Category: Web Application</li>
+                            <li>Client: Research grants</li>
+                            <li>Project URL: <a href="https://github.com/brynard/AITA_v2">AITA_v2</a> </li>
+                            <li>Methodology: Kanban</li>
+                            <li>Frontend: Laravel Blade</li>
+                            <li>Backend: Laravel Framework</li>
+                            <li>Database: MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-container ">
+                <!-- Slider main container -->
+                <div class="swiper mySwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="images/AITA-login.png" alt="login">
+                            
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/AITA-dashboard.png" alt="dashboard">
+                            <!-- <div class="title"><span>Resident dashboard</span></div> -->
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/AITA-Loan.png" alt="profile">
+                            <!-- <div class="title"><span>Resident Profile</span></div> -->
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/AITA-history.png" alt="profile">
+                            <!-- <div class="title"><span>Resident Profile</span></div> -->
+                        </div>
+                    </div>
+                    
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="myscripts.js"></script>
+</body>
+
+</html>

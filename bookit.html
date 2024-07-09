@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+ 
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="portfolio-header">
+        <div class="container">
+            <nav>
+                <img src="images/bookit.png" class="logo">
+                <ul id="sideMenu">
+
+
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+            </nav>
+
+
+            <div class="row project">
+                <div class="project-col-left">
+                    <div class="project-title">Bookit - Badminton Court Reservation System</div>
+                    <p>BookIt! is a badminton court reservation system developed for the residents of Subang Perdana
+                        Goodyear Court 10 as a community service project, for the Application Development course (SECJ
+                        3104).</p>
+                </div>
+
+                <div class="project-col-right">
+                    <div class="project-info">
+                        <h3>Project Information</h3>
+                        <ul>
+                            <li>Category: Web Application</li>
+                            <li>Team Size: 4 members</li>
+                            <li>Client: Subang Perdana Goodyear Court 10</li>
+                            <li>Project URL: <a href="https://github.com/clcheong/app-dev-bookIt">app-dev-bookit</a> </li>
+                            <li>Methodology: Agile Scrum development with 4 Sprints</li>
+                            <li>Frontend: Bootstrap</li>
+                            <li>Backend: Python Flask Framework</li>
+                            <li>Database: Google Cloud Platform's BigQuery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-container ">
+                <!-- Slider main container -->
+                <div class="swiper mySwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="images/login.png" alt="login">
+                            
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/resident dashboard.png" alt="dashboard">
+                            <!-- <div class="title"><span>Resident dashboard</span></div> -->
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/resident profile.png" alt="profile">
+                            <!-- <div class="title"><span>Resident Profile</span></div> -->
+                        </div>
+
+                    </div>
+                    
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="myscripts.js"></script>
+</body>
+
+</html>

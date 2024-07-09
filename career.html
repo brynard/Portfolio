@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brynard Portfolio</title>
+    <link rel="icon" href="images/BB.png">
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/fa624bee14.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="getAge()">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/BB.png" class="logo">
+                <ul id="sideMenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Achievement</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="row">
+                <div class="header-text">
+                    <p>Software Developer</p>
+                    <h1>Hi, I'm <span>Brynard</span> <br>Bryan from Malaysia</h1>
+                </div>
+                <!-- <div class ="header-image"><img src="images/robot.png"></div> -->
+            </div>
+
+        </div>
+    </div>
+    <!-- ----------------------------About--------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/background_2.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-me-intro">A fresh graduate from Malaysia with a strong passion for creating
+                        innovative software solutions. I thrive in collaborative environments, believing that teamwork
+                        is the key to achieving great results. Always eager to learn and grow, I continuously seek new
+                        challenges that push my boundaries and enhance my skills. My dedication to the field and
+                        enthusiasm for technology drive me to deliver high-quality work and contribute effectively to
+                        any development team.I am seeking a full-time opportunity as an entry-level Software Engineer.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skill')">General</p>
+                        <p class="tab-links" onclick="opentab('experience')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab " id="skill">
+                        <div class="tab-row">
+
+                            <div class="tab-col-1">
+                                <h3><span>Age</span></h3>
+                                <p class="age" id="age"></p>
+
+
+                                <h3><span>MBTI</span></h3>
+                                <p>ISTP-A</p>
+                                <h3><span>Hobbies</span></h3>
+                                <p>Badminton, Ski, Bouldering</p>
+                                <h3><span>Degree</span></h3>
+                                <p>Bachelor of Computer Science (Software Engineering)</p>
+                            </div>
+                            <div class="tab-col-2">
+                                <h3><span>Hometown</span></h3>
+                                <p>Kota Kinabalu, Sabah</p>
+                                <h3><span>Phone Number</span></h3>
+                                <p>016-827-7859</p>
+                                <h3><span>Email</span></h3>
+                                <p>brynardbryan@gmail.com</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-contents " id="experience">
+
+                        <h3><span>Programming Language</span></h3>
+                        <p>PHP, Java, HTML, CSS, Javascript, C++, Dart, Python</p>
+                        <h3><span>Framework</span></h3>
+                        <p>Laravel, Flutter, </p>
+                        <h3><span>Structured Query Languages</span></h3>
+                        <p>MySQL, Firebase, Google Cloud Platform- Bigquery</p>
+                        <h3><span>Other Related Skills</span></h3>
+                        <p>MVC architecture, Agile Methodology, Chatgpt, Git, Figma</p>
+                    </div>
+                    <div class="tab-contents" id="education">
+
+                        <h3><span>Universiti teknologi Malaysia (2019-2023)</span></h3>
+                        <p> CGPA: 3.87</p>
+                        <h3><span>Matriculation of Labuan (2018-2019)</span></h3>
+                        <p>CGPA: 4.0</p>
+                        <h3><span>SM ALL SAINTS (2013-2017)</span></h3>
+                        <p>7A 3B</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------------------------Achievement------------------------ -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Achievement</h1>
+
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+
+
+                    <h2>Shopee Code League 2022</h2>
+                    <p>Participation</p>
+                    <a href="https://www.credly.com/badges/bb358f67-7a6f-4310-958b-122a02d6c6a8/public_url"
+                        target="_blank">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Programming League National </h2>
+                    <p>Participation</p>
+                    <a href="https://pln24.vercel.app/" target="_blank">Learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ------------------Portfolio--------------- -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/bookit.png">
+                    <div class="layer">
+                        <h3>Bookit- Badminton Booking System</h3>
+                        <a href="bookit.html"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/AITA.png">
+                    <div class="layer">
+                        <h3>AITA- Asset Inventory Tracking Application</h3>
+                        <a href="aita.html"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="work">
+                    <img src="images/logoDAS.png">
+                    <div class="layer">
+                        <h3>Bookit- Badminton Booking System</h3>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div> -->
+                <!-- <div class="work">
+                    <img src="images/logoDAS.png">
+                    <div class="layer">
+                        <h3>Bookit- Badminton Booking System</h3>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <a href="#" class="btn">See More</a> -->
+        </div>
+    </div>
+
+
+    <!-- ------------------Contact--------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> brynardbryan@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +6016-827-7859</p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/brynard.bryan" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/brynardbryan/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/brynard-bryan/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/brynard" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="images/Brynard-Bryan-Edmund-Resume.pdf" download class="btn btn-submit">Download Resume</a>
+                </div>
+                <!-- <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                    </form>
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+    <script src="myscripts.js"></script>
+
+</body>
+
+</html>

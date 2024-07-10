@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Awaits</title>
+    <link rel="stylesheet" href="adventure-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="header">
+        <div class="header-content">
+            <h1>Welcome to the Adventure</h1>
+            <p>Scroll down to explore more!</p>
+            <div class="console">
+                <!-- <img src="images/ski-person.jpeg" alt="Ski Person" class="console-image"> -->
+            </div>
+        </div>
+    </section>
+    <section class="welcome" id="welcome">
+        <div class="welcome-container">
+            <div class="quest-paper">
+                <img src="images/Old Parchment.png" alt="" height="700px" class="parchment">
+                <div class="parchment-content">
+                    <p class="greeting">Greetings, adventurer!</p>
+                    <p class="message">You are about to embark on a grand journey filled with wonder and excitement.
+                        Prepare yourself for the quests ahead, where every step brings new challenges and discoveries.
+                    </p>
+                    <p class="message">Sharpen your sword, ready your spells, and gather your courage. The world is vast
+                        and full of opportunities. Will you rise to the occasion and become the hero of your own story?
+                    </p>
+                    <p class="message">Let the adventure begin!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tavern" id="tavern" style="height: 30vh;"></section>
+    <section class="character" id="character">
+
+        <div class="character-sheet">
+            <div class="character-header">
+                <h1>Brynard</h1>
+                <p>Warrior - Summoner/Introvert</p>
+                <div class="level-exp">
+                    <span>Level 64</span>
+                    <div class="exp-bar">
+                        <div class="exp-filled" style="width: 90%;"></div>
+                    </div>
+                    <span>1320/1465 EXP</span>
+                </div>
+            </div>
+            <div class="character-body">
+                <div class="character-image">
+                    <img src="images/profile-picture.png" alt="Character Image">
+                </div>
+                <div class="character-details">
+                    <div class="stats">
+                        <h3>Stats</h3>
+                        <div class="stat">
+                            <span>HP</span>
+                            <div class="stat-bar">
+                                <div class="filled-bar hp-bar" style="width: 60%;"></div>
+                            </div>
+                            <span>1445/4320</span>
+                        </div>
+                        <div class="stat">
+                            <span>SP</span>
+                            <div class="stat-bar">
+                                <div class="filled-bar sp-bar" style="width: 70%;"></div>
+                            </div>
+                            <span>244/397</span>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <h3>Profile</h3>
+                        <ul>
+                            <li><span>Age</span><span>20</span></li>
+                            <li><span>Height</span><span>5'6"</span></li>
+                            <li><span>Gender</span><span>Male</span></li>
+                            <li><span>Likes</span><span>Adventure, Honey chicken, Vivian from the cafe shop</span></li>
+                            <li><span>Dislikes</span><span>Loud noises, Guild master, Green Pepper</span></li>
+                            <li><span>Special Skill</span><span>Spacing out</span></li>
+                        </ul>
+                    </div>
+                    <div class="equipment">
+                        <h3>Equip</h3>
+                        <ul>
+                            <li><span>Weapon</span><span>Coding</span></li>
+                            <li><span>Armor</span><span>ChatGPT</span></li>
+                            <li><span>Accessory</span><span>Rubber duck</span></li>
+                        </ul>
+                    </div>
+                    <div class="parameters">
+                        <h3>Parameters</h3>
+                        <ul>
+                            <li><span>Introversion</span>
+                                <div class="knowledge-bar">
+                                    <div class="filled-bar knowledge-bar-red" style="width: 80%;"></div>
+                                </div><span>Extraversion</span>
+                            </li>
+                            <li><span>Sensing</span>
+                                <div class="knowledge-bar">
+                                    <div class="filled-bar knowledge-bar-blue" style="width: 70%;"></div>
+                                </div><span>Intuitive</span>
+                            </li>
+                            <li><span>Feeling</span>
+                                <div class="knowledge-bar">
+                                    <div class="filled-bar knowledge-bar-yellow" style="width: 50%;"></div>
+                                </div><span>Thinking</span>
+                            </li>
+                            <li><span>Judging</span>
+                                <div class="knowledge-bar">
+                                    <div class="filled-bar knowledge-bar-green" style="width: 30%;"></div>
+                                </div><span>Perceiving</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map tavern" id="map">
+
+
+        <h2>Choose your destination</h2>
+        <div class="map-container">
+
+            <div class="map-image">
+                <!-- Replace with your map image -->
+                <img src="images/treasure-map.png" alt="Treasure Map">
+                <!-- Example checkpoint for visited countries -->
+                <div class="checkpoint visited" style="top: 30%; left: 40%;">
+                    <span class="tooltip">testing</span>
+                </div>
+                <div class="checkpoint visited" style="top: 50%; left: 60%;">
+                    <span class="tooltip">Germany</span>
+                </div>
+                <!-- Add more checkpoints as needed -->
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    </div>
+    <script src="adventure-script.js"></script>
+</body>
+
+</html>

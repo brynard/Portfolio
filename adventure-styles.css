@@ -627,10 +627,6 @@ li {
     font-size: 16px;
   }
 
-  .scroll-content{
-  background: url("images/scroll_vertical.png") no-repeat center center;
-  background-size: contain;
-  }
 }
 
 

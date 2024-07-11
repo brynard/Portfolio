@@ -597,15 +597,7 @@ li {
     font-size: 16px;
   }
 
-  .quest-section h2,
-.travel-log-section h2,
-.cultural-insight-section h2 {
-  font-family: "MedievalSharp", cursive; /* Medieval-style font */
-  font-size: 20px;
-  /* margin-bottom: 10px; */
-  text-align: center;
-  color: #3e2723;
-}
+
 }
 
 /* Media Queries for Responsiveness */
@@ -619,7 +611,7 @@ li {
   }
 
   .quest-paper {
-    width: 90%;
+    width: 100%;
   }
 
   .scroll-body {
@@ -627,6 +619,10 @@ li {
     font-size: 16px;
   }
 
+  .checkpoint{
+    width: 15px;
+    height: 15px;
+  }
 }
 
 
@@ -644,6 +640,30 @@ li {
   
   .message {
     font-size: 14px;
+    margin: 10px 0;
+  }
+  .checkpoint{
+    width: 10px;
+    height: 10px;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+  .scroll-body {
+    padding: 5px;
+    font-size: 14px;
+  }
+.quest-paper{
+  width: 110%;
+}
+  .greeting {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+  
+  .message {
+    font-size: 12px;
     margin: 10px 0;
   }
 }

@@ -1,495 +1,653 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Press Start 2P', cursive;
-    color: white;
-    background-color: beige;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  background-color: beige;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .header {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
 }
 
 .header-content {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    transition: opacity 0.5s ease;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  transition: opacity 0.5s ease;
 }
 
-.header-content h1, .header-content p {
-    margin: 0;
-    padding: 10px;
+.header-content h1,
+.header-content p {
+  margin: 0;
+  padding: 10px;
 }
 
 .console {
-    width: 100%;
-    max-width: 1000px;
-    height: 60vh; /* Ensure the div has a height */
-    margin: 20px auto 0;
-    position: relative;
-    background: url('images/1.png') no-repeat center center;
-    background-size: contain;
-    overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  height: 60vh; /* Ensure the div has a height */
+  margin: 20px auto 0;
+  position: relative;
+  background: url("images/1.png") no-repeat center center;
+  background-size: contain;
+  overflow: hidden;
 
-    transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .console-image {
-    width: 50%;
-    height: auto;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-
 
 /* ------------Welcome---------- */
 
-
 .welcome {
-    padding: 100px 20px;
-    text-align: center;
-    min-height: 100vh;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: beige;
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: beige;
 }
 
 /* Import a medieval-style font */
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
 
 .welcome h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #aa6; /* Match the border color */
-    font-family: 'MedievalSharp', cursive; /* Apply the medieval font */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a shadow for depth */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 0; /* Adjust as needed */
-    position: relative;
-    top: -50px; /* Adjust positioning */
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #aa6; /* Match the border color */
+  font-family: "MedievalSharp", cursive; /* Apply the medieval font */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Add a shadow for depth */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 0; /* Adjust as needed */
+  position: relative;
+  top: -50px; /* Adjust positioning */
 }
 
 /* Ensure the container's position is centered */
 .welcome-container {
-    width: 90%;
-    background: url('images/questboard.png') no-repeat center center;
-    background-size: cover;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    position: relative;
+  width: 90%;
+  background: url("images/questboard.png") no-repeat center center;
+  background-size: cover;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  position: relative;
 }
 
 .quest-paper {
-    display: inline-block;
-    width: 80%;
-    max-width: 450px;
+  display: inline-block;
+  width: 80%;
+  max-width: 450px;
 
-    border-radius: 10px;
-    position: relative;
-    margin: 50px auto;
-    background-color: #f5f5f5; /* Optional: background for the container */
+  border-radius: 10px;
+  position: relative;
+  margin: 50px auto;
+  background-color: #f5f5f5; /* Optional: background for the container */
 }
 
 .parchment {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: 2px solid black; /* Gold outline for the paper */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), /* Outer shadow for lift effect */
-                0 4px 6px rgba(0, 0, 0, 0.1) inset; /* Inner shadow for pressed effect */
-    border-radius: 10px; /* Matches the container's border-radius */
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid black; /* Gold outline for the paper */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+    /* Outer shadow for lift effect */ 0 4px 6px rgba(0, 0, 0, 0.1) inset; /* Inner shadow for pressed effect */
+  border-radius: 10px; /* Matches the container's border-radius */
 }
 /* .parchment-content to .character */
 
 .parchment-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #000;
-    font-family: 'MedievalSharp', cursive;
-    width: 80%;
-    z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #000;
+  font-family: "MedievalSharp", cursive;
+  width: 80%;
+  z-index: 1;
 }
 
 .greeting {
-    font-size: 24px;
-    margin: 0 0 10px;
+  font-size: 24px;
+  margin: 0 0 10px;
 }
 
 .message {
-    font-size: 18px;
-    margin: 10px 0;
+  font-size: 18px;
+  margin: 10px 0;
 }
 
 .character {
-    margin: 0 auto;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: url(images/tavern.jpeg) no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 100vh;
-    background-color: beige;
-    width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: url(images/tavern.jpeg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  background-color: beige;
+  width: 100%;
 }
 
 .tavern {
-    margin: 0 auto;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: url(images/tavern.jpeg) no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 30vh;
-    background-color: beige;
-    width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: url(images/tavern.jpeg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 30vh;
+  background-color: beige;
+  width: 100%;
 }
 
 .character-sheet {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: beige;
-    border: 8px solid #8b5a2b;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-    background-clip: padding-box;
-    transform: scale(0.1);
-    transition: transform 4s ease; /* Add transition for smooth scaling */
-    top: 30px;
-
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: beige;
+  border: 8px solid #8b5a2b;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-clip: padding-box;
+  transform: scale(0.1);
+  transition: transform 4s ease; /* Add transition for smooth scaling */
+  top: 30px;
 }
 
 .character-sheet:before {
-    content: "";
-    position: absolute;
-    top: -12px;
-    left: -12px;
-    right: -12px;
-    bottom: -12px;
-    border: 2px dashed #8b5a2b;
-    border-radius: 15px;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  border: 2px dashed #8b5a2b;
+  border-radius: 15px;
+  pointer-events: none;
 }
 
 /* Add a class for scaling up */
 .character-sheet.enlarge {
-    transform: scale(0.8); /* Example scale for enlargement */
+  transform: scale(0.8); /* Example scale for enlargement */
 }
 
-
 .character-header {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .character-header h1 {
-    margin: 0;
-    font-size: 36px;
-    color: #4b3621;
+  margin: 0;
+  font-size: 36px;
+  color: #4b3621;
 }
 
 .character-header p {
-    margin: 5px 0;
-    font-size: 18px;
-    font-style: italic;
-    color: #8b5a2b;
+  margin: 5px 0;
+  font-size: 18px;
+  font-style: italic;
+  color: #8b5a2b;
 }
 
 .level-exp {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .level-exp span {
-    margin: 0 10px;
-    font-size: 16px;
-    color: #4b3621;
+  margin: 0 10px;
+  font-size: 16px;
+  color: #4b3621;
 }
 
 .exp-bar {
-    width: 200px;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
+  width: 200px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
 }
 
 .exp-filled {
-    height: 100%;
-    background-color: #ffcc00;
-    position: absolute;
-    top: 0;
-    left: 0;
+  height: 100%;
+  background-color: #ffcc00;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .character-body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
 .character-image img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-    border: 4px solid #4b3621;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  border: 4px solid #4b3621;
 }
 
 .character-details {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }
 
-.stats, .equipment, .parameters, .profile {
-    margin-bottom: 20px;
+.stats,
+.equipment,
+.parameters,
+.profile {
+  margin-bottom: 20px;
 }
 
 h3 {
-    background-color: #4b3621;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 0 0 10px;
-    text-align: center;
+  background-color: #4b3621;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 0 10px;
+  text-align: center;
 }
 
-
-
-
-.stat, .parameters ul li, .profile ul li, .equipment ul li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    color: #4b3621;
+.stat,
+.parameters ul li,
+.profile ul li,
+.equipment ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #4b3621;
 }
 
-.parameters span{
-    flex: 1;
+.parameters span {
+  flex: 1;
 }
 
-.stat-bar, .knowledge-bar {
-    flex: 1;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 5px;
-    
-    margin: 10px;
-    overflow: hidden;
-    position: relative;
+.stat-bar,
+.knowledge-bar {
+  flex: 1;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 5px;
+
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
 }
 
-.knowledge-bar{
-    flex: 3;
+.knowledge-bar {
+  flex: 3;
 }
-
 
 .filled-bar {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hp-bar {
-    background-color: #ff6347;
+  background-color: #ff6347;
 }
 
 .sp-bar {
-    background-color: #4682b4;
+  background-color: #4682b4;
 }
 
 .knowledge-bar-blue {
-    background-color: #4682b4;
+  background-color: #4682b4;
 }
 
 .knowledge-bar-red {
-    background-color: #ff6347;
+  background-color: #ff6347;
 }
 
 .knowledge-bar-yellow {
-    background-color: #ffd700;
+  background-color: #ffd700;
 }
 
 .knowledge-bar-green {
-    background-color: #32cd32;
+  background-color: #32cd32;
 }
 
-
-
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-    margin: 5px 0;
-    font-size: 16px;
+  margin: 5px 0;
+  font-size: 16px;
 }
-
-
-
 
 /* ------------------Map--------------------- */
 .map.tavern {
-    padding: 100px 20px;
-  
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+  /* padding: 100px 20px; */
+
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .map.tavern h2 {
-    position: relative;
-    font-size: 36px;
-    color: #4b3621;
-    text-align: center;
-    font-family: 'MedievalSharp';
-    margin-bottom: 30px;
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-    border: 10px solid transparent; /* Ensure space for the border image */
-    background-clip: padding-box; /* Clip background to padding box */
-    border-radius: 15px;
-    opacity: 0;
-    transition: opacity 2s ease;
+  position: relative;
+  font-size: 36px;
+  color: #4b3621;
+  text-align: center;
+  font-family: "MedievalSharp";
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  border: 10px solid transparent; /* Ensure space for the border image */
+  background-clip: padding-box; /* Clip background to padding box */
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 2s ease;
 }
-
-
-
 
 .map-container {
-    max-width: 1000px; /* Set maximum width for the map container */
-    
-    padding: 20px;
+  max-width: 1000px; /* Set maximum width for the map container */
+
+  padding: 20px;
   
-    position: relative;
-    overflow: hidden; /* Ensure overflow is hidden to contain the map image */
-    margin: 0 auto; /* Center align horizontally */
-    opacity: 0;
-    transition: opacity 3s ease;
+  position: relative;
+  overflow: hidden; /* Ensure overflow is hidden to contain the map image */
+  margin: 0 auto; /* Center align horizontally */
+  opacity: 0;
+  transition: opacity 3s ease;
 }
 
-.map-container.show, .map.tavern h2.show{
-    opacity: 1;
+.map-container.show,
+.map.tavern h2.show {
+  opacity: 1;
 }
 
 .map-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border: 8px solid #8b5a2b; /* Example border for a border-like feel */
-    border-radius: 10px; /* Optional: Border radius */
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 8px solid #8b5a2b; /* Example border for a border-like feel */
+  border-radius: 10px; /* Optional: Border radius */
 }
 
 .checkpoint {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #4682b4; /* Change color as needed */
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #4682b4; /* Change color as needed */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .checkpoint.visited {
-    background-color: #32cd32; /* Change color for visited checkpoints */
+  background-color: #32cd32; /* Change color for visited checkpoints */
 }
 
 .checkpoint:hover {
-    transform: scale(1.2); /* Example hover effect */
+  transform: scale(1.2); /* Example hover effect */
+}
+.checkpoint {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #4682b4; /* Change color as needed */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.checkpoint.visited {
+  background-color: #32cd32; /* Change color for visited checkpoints */
+}
+
+.checkpoint:hover {
+  transform: scale(1.2); /* Example hover effect */
 }
 
 .tooltip {
-    visibility: hidden;
-    width: 120px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    height: auto;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  height: auto;
 }
 
 .checkpoint:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
+
+
 /* Example positioning for tooltip */
-.checkpoint:nth-child(1) .tooltip { top: -20px; left: 50%; }
-.checkpoint:nth-child(2) .tooltip { top: -20px; left: 50%; }
+.checkpoint:nth-child(1) .tooltip {
+  top: -20px;
+  left: 50%;
+}
+.checkpoint:nth-child(2) .tooltip {
+  top: -20px;
+  left: 50%;
+}
 /* Add more specific positioning for each checkpoint as needed */
 
+/* -----------------------Book------------------------ */
 
 
 
+/* General Modal Styles */
+.scroll-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+}
+
+.scroll-content {
+  background: url("images/USA-1.png") no-repeat center center;
+  background-size: contain;
+  margin: auto;
+  max-width: 1200px; /* Set maximum width for the scroll content */
+  width: 100%;
+  height: 80%;
+  top: 10%;
+  position: relative;
+  animation: slideIn 1s ease-out; /* Slide in animation */
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-content {
+    width: 80%;
+    height: 60%;
+    top: 20%;
+  }
+}
+
+.scroll-header .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.scroll-header .close:hover,
+.scroll-header .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.scroll-body {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  color: #3e2723;
+  font-family: "Garamond", serif;
+  font-size: 18px;
+  background-size: 80% 80%;
+}
+
+/* Scroll Navigation */
+.scroll-navigation {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+}
+
+.scroll-navigation .rpg-btn {
+  background: url("images/parchment_texture.png") no-repeat center center; /* Use your own parchment texture */
+  background-size: cover;
+  color: #3e2723; /* Darker text color */
+  font-family: "MedievalSharp", cursive; /* Ensure you have this font available or use another medieval-style font */
+  padding: 15px 30px; /* Larger padding for a bigger button */
+  font-size: 24px; /* Larger font size */
+  cursor: pointer;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+  border: none;
+  border-radius: 10px;
+}
+
+.scroll-navigation .rpg-btn:hover {
+  transform: scale(1.1);
+}
+
+.scroll-navigation .rpg-btn:active {
+  transform: scale(0.9);
+}
 
 
 
+@media (max-width: 1618px) {
+  .scroll-body {
+    padding: 10px;
+    font-size: 16px;
+  }
 
-
-
-
-
+  .quest-section h2,
+.travel-log-section h2,
+.cultural-insight-section h2 {
+  font-family: "MedievalSharp", cursive; /* Medieval-style font */
+  font-size: 20px;
+  /* margin-bottom: 10px; */
+  text-align: center;
+  color: #3e2723;
+}
+}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .console {
-        width: 90%;
-    }
+  .console {
+    width: 90%;
+  }
 
-    .hobby h2 {
-        font-size: 28px;
-    }
+  .hobby h2 {
+    font-size: 28px;
+  }
 
-    .quest-paper {
-        width: 90%;
-    }
+  .quest-paper {
+    width: 90%;
+  }
+
+  .scroll-body {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .scroll-content{
+  background: url("images/scroll_vertical.png") no-repeat center center;
+  background-size: contain;
+  }
 }
 
+
+
+@media screen and (max-width: 480px) {
+  .scroll-body {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .greeting {
+    font-size: 20px;
+    margin: 0 0 10px;
+  }
+  
+  .message {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+}

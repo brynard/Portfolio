@@ -77,3 +77,43 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listen for scroll events to check visibility again
     window.addEventListener('scroll', checkMapVisibility);
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollModal = document.getElementById('scroll-modal');
+    const closeModal = document.querySelector('.scroll-header .close');
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const scrollContent = document.querySelector('.scroll-content');
+    const checkpoints = document.querySelectorAll('.checkpoint');
+
+    let currentBackground = 0;
+    const backgrounds = ["images/USA-1.png", "images/USA-2.png", "images/USA-3.png"]; // Array of background images
+
+    checkpoints.forEach(checkpoint => {
+        checkpoint.addEventListener('click', function () {
+            scrollModal.style.display = 'block';
+        });
+    });
+
+    closeModal.addEventListener('click', function () {
+        scrollModal.style.display = 'none';
+    });
+
+    nextBtn.addEventListener('click', function () {
+        currentBackground = (currentBackground + 1) % backgrounds.length;
+        scrollContent.style.backgroundImage = `url(${backgrounds[currentBackground]})`;
+    });
+
+    prevBtn.addEventListener('click', function () {
+        currentBackground = (currentBackground - 1 + backgrounds.length) % backgrounds.length;
+        scrollContent.style.backgroundImage = `url(${backgrounds[currentBackground]})`;
+    });
+
+    // Hide modal when clicking outside of it
+    window.addEventListener('click', function (event) {
+        if (event.target === scrollModal) {
+            scrollModal.style.display = 'none';
+        }
+    });
+});

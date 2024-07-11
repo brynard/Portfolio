@@ -92,11 +92,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     checkpoints.forEach(checkpoint => {
         checkpoint.addEventListener('click', function () {
+            currentBackground = 0; // Reset to first background when a checkpoint is clicked
+            scrollContent.style.backgroundImage = `url(${backgrounds[currentBackground]})`;
             scrollModal.style.display = 'block';
         });
     });
 
     closeModal.addEventListener('click', function () {
+        
         scrollModal.style.display = 'none';
     });
 

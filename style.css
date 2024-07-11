@@ -285,7 +285,10 @@ nav ul li a:hover::after {
   text-align: center;
   font-size: 15px;
   transition: height 0.5s;
+  
 }
+
+
 
 .layer h3 {
   font-weight: 500;

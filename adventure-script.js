@@ -88,29 +88,40 @@ document.addEventListener('DOMContentLoaded', function () {
     const checkpoints = document.querySelectorAll('.checkpoint');
 
     let currentBackground = 0;
-    const backgrounds = ["images/USA-1.png", "images/USA-2.png", "images/USA-3.png"]; // Array of background images
+    let currentCheckPointId = null;
+
+    // Define backgrounds for each checkpoint ID
+    const backgroundMappings = {
+        'usa': ["images/USA-1.png", "images/USA-2.png", "images/USA-3.png"],
+        'germany': ["images/Germany-1.png", "images/Germany-2.png", "images/Germany-3.png"]
+        // Add more mappings as needed for other checkpoints
+    };
 
     checkpoints.forEach(checkpoint => {
         checkpoint.addEventListener('click', function () {
+            currentCheckPointId = checkpoint.querySelector('.tooltip').id;
             currentBackground = 0; // Reset to first background when a checkpoint is clicked
-            scrollContent.style.backgroundImage = `url(${backgrounds[currentBackground]})`;
+            scrollContent.style.backgroundImage = `url(${backgroundMappings[currentCheckPointId][currentBackground]})`;
             scrollModal.style.display = 'block';
         });
     });
 
     closeModal.addEventListener('click', function () {
-        
         scrollModal.style.display = 'none';
     });
 
     nextBtn.addEventListener('click', function () {
-        currentBackground = (currentBackground + 1) % backgrounds.length;
-        scrollContent.style.backgroundImage = `url(${backgrounds[currentBackground]})`;
+        if (currentCheckPointId && backgroundMappings[currentCheckPointId]) {
+            currentBackground = (currentBackground + 1) % backgroundMappings[currentCheckPointId].length;
+            scrollContent.style.backgroundImage = `url(${backgroundMappings[currentCheckPointId][currentBackground]})`;
+        }
     });
 
     prevBtn.addEventListener('click', function () {
-        currentBackground = (currentBackground - 1 + backgrounds.length) % backgrounds.length;
-        scrollContent.style.backgroundImage = `url(${backgrounds[currentBackground]})`;
+        if (currentCheckPointId && backgroundMappings[currentCheckPointId]) {
+            currentBackground = (currentBackground - 1 + backgroundMappings[currentCheckPointId].length) % backgroundMappings[currentCheckPointId].length;
+            scrollContent.style.backgroundImage = `url(${backgroundMappings[currentCheckPointId][currentBackground]})`;
+        }
     });
 
     // Hide modal when clicking outside of it

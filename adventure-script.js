@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Define backgrounds for each checkpoint ID
     const backgroundMappings = {
         'usa': ["images/USA-1.png", "images/USA-2.png", "images/USA-3.png"],
-        'germany': ["images/germany-1.png", "images/germany-2.png", "images/germany-3.png"]
+        'germany': ["images/Germany-1.png", "images/Germany-2.png", "images/Germany-3.png"]
         // Add more mappings as needed for other checkpoints
     };
 

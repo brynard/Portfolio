@@ -590,14 +590,45 @@ li {
 }
 
 
+.coming-soon{
+  text-align: center;
+  min-height: 120vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.coming-soon-content{
+  max-width: 1500px; 
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.coming-soon-content img{
+
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+
+}
 
 @media (max-width: 1618px) {
   .scroll-body {
     padding: 10px;
     font-size: 16px;
   }
+}
 
-
+@media (max-width:1024px){
+  .coming-soon-content img{
+    width: 100%;
+  }
 }
 
 /* Media Queries for Responsiveness */
@@ -622,6 +653,17 @@ li {
   .checkpoint{
     width: 15px;
     height: 15px;
+  }
+
+  .coming-soon{
+    min-height: 70vh;
+  }
+  .coming-soon-content{
+    padding-top: 0px;
+  }
+
+  .coming-soon-content img{
+    width: 100%;
   }
 }
 

@@ -1,8 +1,8 @@
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const scrollY = window.scrollY;
     const headerHeight = document.querySelector('.header').offsetHeight;
     const hobbySection = document.querySelector('.welcome');
-    
+
     const zoomLevel = 1 + scrollY / 1000;
     const fadeOutLevel = Math.min(scrollY / headerHeight, 1);
 
@@ -18,7 +18,7 @@ window.addEventListener('scroll', function() {
 
 
 
-document.addEventListener('scroll', function() {
+document.addEventListener('scroll', function () {
     var characterSection = document.getElementById('character');
     var characterSheet = document.querySelector('.character-sheet');
 
@@ -27,18 +27,18 @@ document.addEventListener('scroll', function() {
     // Add/remove class to character sheet based on scroll position
     if (scrollTop > characterSection.offsetTop - 200) { // Adjust the threshold (-200) as needed
         characterSheet.classList.add('enlarge');
-      
+
     }
     //  else {
     //     characterSheet.classList.remove('enlarge');
-     
+
     // }
 });
 
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Select the map section and map elements
     const mapSection = document.getElementById('map');
     const mapTitle = mapSection.querySelector('h2');
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if map section is in viewport and trigger animations
     function checkMapVisibility() {
         if (isInViewport(mapTitle) && !mapSection.classList.contains('show')) {
-            
+
         }
         if (isInViewport(mapContainer) && !mapSection.classList.contains('show')) {
             fadeInElement(mapTitle);
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Define backgrounds for each checkpoint ID
     const backgroundMappings = {
         'usa': ["images/USA-1.png", "images/USA-2.png", "images/USA-3.png"],
-        'germany': ["images/Germany-1.png", "images/Germany-2.png", "images/Germany-3.png"]
+        'germany': ["images/germany-1.png", "images/germany-2.png", "images/germany-3.png"]
         // Add more mappings as needed for other checkpoints
     };
 
